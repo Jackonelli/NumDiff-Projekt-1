@@ -6,7 +6,7 @@ f = @(t, y) -2 *(y-sin(t))+cos(t);
 
 t0 = 0;
 tf=2*pi;
-%Gör tol skiten långsam på 0,001?
+%Gör tol skiten långsam på 0,000001?
 tol= 0.00001;
 y0= 1/2;
 [t, y] = adaptiveRK34(f, y0, t0, tf, tol);
