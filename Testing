@@ -1,0 +1,13 @@
+n = 9
+
+lambda = 1;
+t0=0;
+tf=10;
+y0=1;
+N = logspace(1,n);
+error = zeroes(n);
+for i = 1:n
+   error(i)=RK4err(lamda, y0, t0, tf, N(i));
+end
+
+plot (N, error, 'r');
